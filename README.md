@@ -1,13 +1,13 @@
-﻿# l
+﻿# lo
 
-l is a module of only was to simplify the console.log
+lo is a module of only was to simplify the console.log
 
 ## usage
 
 ```javascript
-l = require('l')
+lo = require('lo')
 
-l.l('message')
+lo.l('message')
 ```
 
 ### isConsoleLog param
@@ -15,11 +15,11 @@ l.l('message')
 true to output, false does not output
 
 ```javascript
-l = require('l')
+lo = require('lo')
 
-l.isConsoleLog = false
+lo.isConsoleLog = false
 
-l.l('message')  // not output
+lo.l('message')  // not output
 ```
 
 enjoy!!

@@ -1,15 +1,15 @@
 {
-  "name": "l",
-  "version": "0.0.1",
+  "name": "lo",
+  "version": "0.0.2",
   "description": "simple console.log",
-  "main": "build/l.js",
+  "main": "build/lo.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:hisasann/l.git"
+    "url": "git@github.com:hisasann/lo.git"
   },
   "scripts": {
-    "dev": "beefy src/l.coffee:build/l.js --live",
-    "build": "browserify src/l.coffee > build/l.js"
+    "dev": "beefy src/lo.coffee:build/lo.js --live",
+    "build": "browserify src/lo.coffee > build/lo.js"
   },
   "keywords": [
     "console.log"

@@ -1,11 +1,22 @@
 {
   "name": "l",
-  "version": "0.0.1",
-  "main": "build/l.js",
+  "version": "0.0.2",
+  "main": "build/lo.js",
   "ignore": [
     "node_modules",
-    "components"
+    "components",
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
   ],
-  "dependencies": {
-  }
+  "homepage": "https://github.com/hisasann/lo",
+  "description": "simple console.log",
+  "keywords": [
+    "console.log"
+  ],
+  "authors": [
+    "hisasann"
+  ],
+  "license": "MIT"
 }
