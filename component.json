@@ -1,6 +1,6 @@
 {
   "name": "l",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "build/lo.js",
   "ignore": [
     "node_modules",
