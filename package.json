@@ -1,0 +1,35 @@
+{
+  "name": "l",
+  "version": "0.0.1",
+  "description": "simple console.log",
+  "main": "build/l.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hisasann/l.git"
+  },
+  "scripts": {
+    "dev": "beefy src/l.coffee:build/l.js --live",
+    "build": "browserify src/l.coffee > build/l.js"
+  },
+  "keywords": [
+    "console.log"
+  ],
+  "author": "hisasann",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^5.11.0",
+    "coffeeify": "^0.6.0"
+  },
+  "dependencies": {
+  },
+  "browserify": {
+    "transform": [
+      [ "coffeeify" ]
+    ]
+  }
+}

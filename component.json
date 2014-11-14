@@ -1,0 +1,11 @@
+{
+  "name": "l",
+  "version": "0.0.1",
+  "main": "build/l.js",
+  "ignore": [
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+  }
+}
