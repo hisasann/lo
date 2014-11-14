@@ -4,10 +4,10 @@
 if !console.log
   throw new Error( "l requires console.log" );
 
-l =
+lo =
   isConsoleLog: true
 
-Object.defineProperty l, "__stack",
+Object.defineProperty lo, "__stack",
   get: ->
     orig = Error.prepareStackTrace
     Error.prepareStackTrace = (_, stack) ->
@@ -19,16 +19,16 @@ Object.defineProperty l, "__stack",
     Error.prepareStackTrace = orig
     stack
 
-Object.defineProperty l, "__line",
+Object.defineProperty lo, "__line",
   get: ->
-    l.__stack[1].getLineNumber()
+    lo.__stack[1].getLineNumber()
 
-Object.defineProperty l, "__file",
+Object.defineProperty lo, "__file",
   get: ->
-    l.__stack[0].getFileName()
+    lo.__stack[0].getFileName()
 
-l.l = (log) ->
+lo.l = (log) ->
   if l.isConsoleLog
-    console.log [l.__line, ' - ', log].join ''
+    console.log [lo.__line, ' - ', log].join ''
 
-module.exports = l
+module.exports = lo
