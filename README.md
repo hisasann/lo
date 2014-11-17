@@ -10,16 +10,16 @@ lo = require('lo')
 lo.l('message')
 ```
 
-### isConsoleLog param
+### isShowLine param
 
-true to output, false does not output
+true to line output, false does not line output
 
 ```javascript
 lo = require('lo')
 
-lo.isConsoleLog = false
+lo.isShowLine = false
 
-lo.l('message')  // not output
+lo.l('message')  // no line to display
 ```
 
 enjoy!!
