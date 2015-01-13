@@ -11,6 +11,13 @@
         return console.log.apply(console, logs);
       }
     };
+    lo.e = function() {
+      var logs;
+      if (lo.isConsoleLog) {
+        logs = Array.prototype.slice.call(arguments);
+        return console.error.apply(console, logs);
+      }
+    };
     if (typeof define === "function" && define.amd) {
       define(function() {
         return lo;
