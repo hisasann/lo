@@ -1,6 +1,6 @@
 {
   "name": "lo",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "simple console.log",
   "main": "build/lo.js",
   "repository": {

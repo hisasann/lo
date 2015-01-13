@@ -22,9 +22,13 @@ lo.l(2);
 
 lo.l(3);
 
+lo.e('error', new Error('エラー'));
+
 lo.isConsoleLog = false;
 
 lo.l('don\'t display');
+
+lo.e('error', new Error('エラー'));
 
 
 },{"../src/lo":2}],2:[function(require,module,exports){
@@ -38,6 +42,13 @@ lo.l('don\'t display');
     if (lo.isConsoleLog) {
       logs = Array.prototype.slice.call(arguments);
       return console.log.apply(console, logs);
+    }
+  };
+  lo.e = function() {
+    var logs;
+    if (lo.isConsoleLog) {
+      logs = Array.prototype.slice.call(arguments);
+      return console.error.apply(console, logs);
     }
   };
   if (typeof define === "function" && define.amd) {

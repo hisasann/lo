@@ -10,7 +10,9 @@ lo.l obj
 lo.l 1
 lo.l 2
 lo.l 3
+lo.e 'error', new Error('エラー')
 
 lo.isConsoleLog = false
 lo.l 'don\'t display'
+lo.e 'error', new Error('エラー')
 
