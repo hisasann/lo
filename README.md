@@ -23,4 +23,8 @@ lo.isConsoleLog = false
 lo.l('message')  // not output
 ```
 
+### thanks
+
+[ktty1220/lwl](https://github.com/ktty1220/lwl)
+
 enjoy!!
