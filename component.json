@@ -1,7 +1,7 @@
 {
   "name": "l",
-  "version": "0.0.7",
-  "main": "build/lo.js",
+  "version": "1.0.0",
+  "main": "lo.js",
   "ignore": [
     "node_modules",
     "components",

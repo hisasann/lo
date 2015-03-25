@@ -1,4 +1,5 @@
-﻿# lo
+﻿:lipstick: lo :lipstick:
+===============
 
 lo is a module of only was to simplify the console.log
 
