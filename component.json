@@ -1,6 +1,6 @@
 {
-  "name": "l",
-  "version": "1.0.0",
+  "name": "lo",
+  "version": "1.0.1",
   "main": "lo.js",
   "ignore": [
     "node_modules",

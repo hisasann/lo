@@ -84,26 +84,16 @@
     return ('0' + d).substr(-2);
   };
 
-  var logFormatter = function(timestamp, level, func, file, line, message) {
-    return [timestamp, ' ', func, '@', file, ':', line, ' [', level, '] ', message].join('');
+  var logFormatter = function(timestamp, level, func, file, line) {
+    return [func, '@', file, ':', line, ' [', level, '] '].join('');
   };
 
   var logger = function(level, msg) {
-    var args = [];
-    for (var i = 0, len = msg.length; i < len; i++) {
-      var m = msg[i];
-      var v = m;
-      if (typeof m === 'string') {
-        // シングルコートの除去
-        v = v.replace(/^'(.+)'$/, '$1');
-      }
-      args.push(v);
-    }
-
     var d = new Date();
     var timestamp = [d.getFullYear(), '-', zeroPadding(d.getMonth() + 1), '-', zeroPadding(d.getDate()), ' ', zeroPadding(d.getHours()), ':', zeroPadding(d.getMinutes()), ':', zeroPadding(d.getSeconds())].join('');
     var stack = lo.__stack[2];
-    var output = logFormatter(timestamp, level, stack.func, stack.file, stack.line, args.join(' '));
+    var prefix = [logFormatter(timestamp, level, stack.func, stack.file, stack.line)];
+    var output = prefix.concat(msg);
 
     return output;
   };
@@ -111,21 +101,21 @@
   // is show console.xxx
   lo.isConsoleLog = true;
 
-  // console.log
-  lo.l = function() {
-    if (!lo.isConsoleLog) {
-      return;
-    }
-    console.log(logger('log', Array.prototype.slice.call(arguments)));
-  };
+  var logType = [
+    {key: 'l', value: 'log'},
+    {key: 'i', value: 'info'},
+    {key: 'w', value: 'warn'},
+    {key: 'e', value: 'error'}
+  ];
 
-  // console.error
-  lo.e = function() {
-    if (!lo.isConsoleLog) {
-      return;
+  logType.forEach(function(type) {
+    lo[type.key] = function() {
+      if (!lo.isConsoleLog) {
+        return;
+      }
+      console[type.value].apply(console, logger(type.value, Array.prototype.slice.call(arguments)));
     }
-    console.error(logger('error', Array.prototype.slice.call(arguments)));
-  };
+  });
 
   return lo; // point
 });

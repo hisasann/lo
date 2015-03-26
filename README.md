@@ -23,6 +23,15 @@ lo.isConsoleLog = false
 lo.l('message')  // not output
 ```
 
+## console methods correspondence table
+
+|console methdo|lo method|
+|:--|:--|
+|console.log|lo.l||
+|console.info|lo.i||
+|console.warn|lo.w||
+|console.error|lo.e||
+
 ### thanks
 
 [ktty1220/lwl](https://github.com/ktty1220/lwl)
