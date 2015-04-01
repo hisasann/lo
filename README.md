@@ -27,7 +27,7 @@ lo.l('message')  // not output
 
 ## console methods correspondence table
 
-|console methdo|lo method|
+|console method|lo method|
 |:--|:--|
 |console.log|lo.l||
 |console.info|lo.i||
