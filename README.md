@@ -1,6 +1,8 @@
 ﻿:lipstick: lo :lipstick:
 ===============
 
+<img src="http://npm.packagequality.com/badge/lo.png"/>
+
 lo is a module of only was to simplify the console.log
 
 ## usage
